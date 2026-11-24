@@ -1,0 +1,17 @@
+{
+  "name": "void",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.8.0",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "dev": "corepack pnpm --filter @void/api dev",
+    "dev:mem": "corepack pnpm --filter @void/api dev:mem",
+    "worker": "corepack pnpm --filter @void/worker start",
+    "web": "corepack pnpm --filter @void/web dev",
+    "seed": "corepack pnpm --filter @void/api seed",
+    "seed:check": "corepack pnpm --filter @void/api seed:check",
+    "test": "corepack pnpm -r test",
+    "typecheck": "corepack pnpm -r typecheck"
+  }
+}

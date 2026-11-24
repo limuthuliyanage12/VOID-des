@@ -1,0 +1,10 @@
+packages:
+  - apps/*
+  - packages/*
+# Hoisted keeps binary paths short. pnpm's nested store pushes esbuild.exe past
+# the 260-character Windows path limit when the repo sits in a deep folder.
+nodeLinker: hoisted
+allowBuilds:
+  esbuild: true
+  mongodb-memory-server: false
+  msgpackr-extract: false

@@ -1,0 +1,13 @@
+{
+  "name": "@void/worker",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "tsx --env-file-if-exists=../../.env src/index.ts",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "echo \"worker has no tests of its own; job handlers are tested in @void/api\""
+  },
+  "dependencies": { "@void/api": "workspace:*" },
+  "devDependencies": { "tsx": "^4.19.0", "typescript": "^5.9.0", "@types/node": "^22.15.0" }
+}

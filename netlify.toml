@@ -1,0 +1,4 @@
+# The public site is the static front end in apps/web (plain HTML/CSS/JS, no build step).
+[build]
+  publish = "apps/web"
+  command = "echo 'No build step: serving apps/web as-is'"

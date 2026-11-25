@@ -1,6 +1,9 @@
+# The trailing slashes are deliberate. pnpm reads these the same as apps/* and
+# packages/*, but Netlify's deploy then treats the repo as one site (published
+# from apps/web per netlify.toml) instead of stopping to ask which package to deploy.
 packages:
-  - apps/*
-  - packages/*
+  - apps/*/
+  - packages/*/
 # Hoisted keeps binary paths short. pnpm's nested store pushes esbuild.exe past
 # the 260-character Windows path limit when the repo sits in a deep folder.
 nodeLinker: hoisted
